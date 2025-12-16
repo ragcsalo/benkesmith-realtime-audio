@@ -1,8 +1,8 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-    start: function (onAudio) {
-        exec(onAudio, null, 'RealtimeAudio', 'start', []);
+    start: function (apiKey, onAudio) {
+        exec(onAudio, null, 'RealtimeAudio', 'start', [apiKey]);
     },
 
     stop: function () {
