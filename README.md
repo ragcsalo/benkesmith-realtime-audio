@@ -18,9 +18,21 @@ cordova plugin add https://github.com/ragcsalo/benkesmith-realtime-audio
 ```js
 RealtimeAudio.start(OPENAI_API_KEY, function (event) {
     const msg = JSON.parse(event);
-    console.log(msg);
+
+    if (msg.type === "status") {
+        console.log("status:", msg.value);
+    }
+
+    if (msg.type === "response.output_text.delta") {
+        console.log("partial:", msg.delta);
+    }
+
+    if (msg.type === "response.output_text.done") {
+        console.log("final:", msg.text);
+    }
 });
 
+// later
 RealtimeAudio.stop();
 ```
 
