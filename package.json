@@ -1,0 +1,32 @@
+{
+  "name": "benkesmith-realtime-audio",
+  "version": "1.0.0",
+  "description": "A Cordova plugin for using realtime OpenAI speech recognition.",
+  "cordova": {
+    "id": "com.benkesmith.realtimeaudio",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ragcsalo/benkesmith-realtime-audio.git"
+  },
+  "keywords": [
+    "cordova",
+    "audio",
+    "speech",
+    "realtime",
+    "recognition",
+    "plugin"
+  ],
+  "author": "Benke Smith <benke.smith@gmail.com>",
+  "license": "Apache-2.0",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6.0.0"
+    }
+  ]
+}
