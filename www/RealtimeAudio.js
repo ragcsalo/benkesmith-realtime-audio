@@ -1,8 +1,19 @@
 var exec = require('cordova/exec');
 
 module.exports = {
-    start: function (apiKey, onAudio) {
-        exec(onAudio, null, 'RealtimeAudio', 'start', [apiKey]);
+
+    start: function (options, onEvent) {
+        if (!options || !options.apiKey) {
+            throw new Error("apiKey is required");
+        }
+
+        exec(
+            onEvent,
+            null,
+            'RealtimeAudio',
+            'start',
+            [options]
+        );
     },
 
     stop: function () {
